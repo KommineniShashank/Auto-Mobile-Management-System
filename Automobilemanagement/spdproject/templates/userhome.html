@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django</title>
+</head>
+<body>
+ <title>
+        {% block 'title' %}
+        Main Home
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+<h3 align="center">AUTO MOBILE SYSTEM</h3>
+<hr><hr>
+<style >
+body, html {
+  height: 100%;
+}
+body {
+  background-image: url("https://wallup.net/wp-content/uploads/2018/10/04/209337-cars-drawings-white-background.jpg");
+    height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+    nav {
+  background-color: #333; /* change the background color to your desired color */
+  overflow: hidden;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #ddd; /* change the hover background color to your desired color */
+  color: black;
+}
+
+</style>
+<nav>
+    <ul>
+        <li><a href="{% url 'userhome' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="{% url 'spareparts' %}">Spareparts</a>&nbsp;</li>
+        <li><a href="{% url 'viewaproducts' %}">view new products</a>&nbsp;&nbsp;</li>
+<li><a href="{% url 'feedback' %}">Feedback</a>&nbsp;&nbsp;</li>
+         <li><a href="{% url 'userlogout' %}">Logout</a>&nbsp;&nbsp;</li>
+         <button type="button" class="btn btn-success " id="popcart" data-container="body" data-toggle="popover" data-placement="bottom" data-html="true" data-content="Vivamus
+            sagittis lacus vel augue laoreet rutrum faucibus."style="background: transparent;border: transparent;color: white;font-weight: 700;">
+            
+            
+            
+              Cart(<span id="cart">0</span>)
+            </button>
+         </ul>
+</nav>
+<br><br>
+
+<h4 align="right">Hi, {{auname}}</h4>
+<h2>
+    You can buy the Spare parts of the Auto mobile
+    <br>
+
+</h2>
+{% block 'body' %}
+
+{% endblock %}
+
+</body>
+</body>
+</html>
